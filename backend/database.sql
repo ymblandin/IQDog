@@ -48,7 +48,21 @@ INSERT INTO `dog` (`name`, `date_of_birth`, `date_of_creation`) VALUES
 
 CREATE TABLE `test` (
   `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `` varchar(255) NOT NULL,
-  `date_of_birth` date NULL,
-  `date_of_creation` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `date` date NOT NULL,
+  `id_basetest` int(11)  UNSIGNED NOT NULL,
+  `id_testset` int(11)  UNSIGNED NULL,
+  `id_dog` int(11)  UNSIGNED NOT NULL,
+  `result` int(11)  UNSIGNED NOT NULL,
+  `time` int(11)  UNSIGNED NULL
+);
+
+--
+-- Creation de la table `testset`
+--
+
+CREATE TABLE `testset` (
+  `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `id_dog` int(11)  UNSIGNED NOT NULL,
+  `result` int(11)  UNSIGNED NOT NULL
+);
