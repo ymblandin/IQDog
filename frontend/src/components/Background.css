@@ -264,3 +264,7 @@
   transform-origin: 19vw -2vh;
   box-shadow: -2vmin 0 0.5485610021067596vmin currentColor;
 }
+
+.background h3 {
+  color: #252d4a;
+}

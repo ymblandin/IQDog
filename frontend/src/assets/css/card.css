@@ -1,24 +1,38 @@
 .navlink-card {
   text-decoration: none;
 }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
 
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
   color: #1a1a1d;
-  border: 1px solid #1a1a1d;
-  border-radius: 10px;
-  margin: 0 2rem;
+  border-radius: 15px;
+  overflow: hidden;
   font-weight: bold;
   font-size: 1.5rem;
-  background-color: #fbfbfb;
-  padding: 1rem 0 1rem 1rem;
+  background-color: #252d4a;
+  width: 150px;
+}
+
+.card p {
+  color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card img {
   height: 100px;
-  width: 100px;
-  z-index: 1;
+  width: 150px;
 }

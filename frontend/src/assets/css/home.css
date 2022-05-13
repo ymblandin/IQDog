@@ -8,12 +8,12 @@
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  border: 5px solid brown;
-  background-color: brown;
+  border: 5px solid #252d4a;
+  background-color: #252d4a;
 }
 
 .home h2 {
-  color: brown;
+  color: #252d4a;
   z-index: 1;
   font-size: 3rem;
   color: black;

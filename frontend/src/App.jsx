@@ -1,6 +1,10 @@
 // import Home from "./pages/Home";
-// import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import Background from "./components/Background";
 import "./components/Background.css";
 import "./App.css";
@@ -17,7 +21,9 @@ function App() {
       <Router>
         <div className="App">
           <Background />
-          <h3 className="title">IQ DOGG</h3>
+          <NavLink to="/" className="logo">
+            <h3 className="title">IQ DOGG</h3>
+          </NavLink>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/adddog" element={<AddDog />} />
