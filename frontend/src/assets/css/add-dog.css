@@ -33,11 +33,19 @@
   align-items: center;
 }
 input{
+  background-image: url('../logos/bone.png');
+  background-color: rgba(245, 245, 245, 0.147) ;
   height: 2rem;
+  border-radius: 2rem;
+  padding: 0rem 2rem;
+  border-color: whitesmoke;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.253);
 }
 input#birth{
+  
   width: 10rem;
   color: black;
+  text-align: center;
 }
 input#name{
   width: 13rem;

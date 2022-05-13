@@ -1,8 +1,12 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { IdContext } from "../contexts/IdContext";
 import "../assets/css/add-dog.css";
 
 function AddDog() {
+  const { setDogId } = useContext(IdContext);
+
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
 
@@ -11,12 +15,17 @@ function AddDog() {
   const month = date.getMonth();
   const day = date.getDate();
 
+  const navigate = useNavigate();
+
   const handleClick = () => {
-    axios.post("http://localhost:5000/dogs", {
-      name,
-      birth,
-      creation: `${year}/${month}/${day}`,
-    });
+    axios
+      .post("http://localhost:5000/dogs", {
+        name,
+        birth,
+        creation: `${year}/${month}/${day}`,
+      })
+      .then((response) => setDogId(response.data.insertId));
+    navigate("/home");
   };
 
   return (
@@ -34,11 +43,12 @@ function AddDog() {
         <label htmlFor="birth">
           Quelle est sa date de naissance ?
           <input
-            type="text"
+            type="date"
+            min="2000-01-01"
+            max="2022-12-31"
             value={birth}
             id="birth"
             onChange={(event) => setBirth(event.target.value)}
-            placeholder="AAAA/MM/JJ"
           />
         </label>
         <button type="button" onClick={handleClick}>
