@@ -1,10 +1,17 @@
+import axios from "axios";
 import { useState } from "react";
 
 function AddDog() {
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
 
-  const handleClick = () => {};
+  const handleClick = () => {
+    axios.post("http://localhost:5000/dogs", {
+      name,
+      birth,
+      creation: new Date(),
+    });
+  };
 
   return (
     <div>
@@ -20,11 +27,12 @@ function AddDog() {
       <label htmlFor="birth">
         Quelle est sa date de naissance ?
         <input
-          type="text"
+          type="date"
           value={birth}
           id="birth"
+          min="2000-01-01"
+          max="2022-12-31"
           onChange={(event) => setBirth(event.target.value)}
-          placeholder="AAAA/MM/JJ"
         />
       </label>
       <button type="button" onClick={handleClick}>
