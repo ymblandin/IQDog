@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,7 +37,7 @@ body {
 }
 
 /* Test/TIMER/LEFT SECTION */
-.Test{
+.Test {
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -88,7 +88,6 @@ body {
   cursor: pointer;
 }
 
-
 button:hover {
   background-color: #eee8abd1;
   border: white solid 2px;
@@ -102,11 +101,11 @@ button svg {
   margin-right: 5px;
 }
 
-#valuebtn{
+#valuebtn {
   height: 3rem;
   width: 60vw;
   margin: auto;
 }
-#valuebtn p{
+#valuebtn p {
   margin: auto;
 }
