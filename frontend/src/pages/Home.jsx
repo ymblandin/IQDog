@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import { IdContext } from "../contexts/IdContext";
+
 export default function Home() {
-  return <div>Home</div>;
+  const { dogId } = useContext(IdContext);
+  return <div>{dogId}</div>;
 }
