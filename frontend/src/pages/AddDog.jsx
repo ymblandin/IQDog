@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import "../assets/css/add-dog.css";
 
 function AddDog() {
   const [name, setName] = useState("");
@@ -19,30 +20,31 @@ function AddDog() {
   };
 
   return (
-    <div>
-      <label htmlFor="name">
-        Quel est son nom ?
-        <input
-          type="text"
-          value={name}
-          id="name"
-          onChange={(event) => setName(event.target.value)}
-        />
-      </label>
-      <label htmlFor="birth">
-        Quelle est sa date de naissance ?
-        <input
-          type="date"
-          value={birth}
-          id="birth"
-          min="2000-01-01"
-          max="2022-12-31"
-          onChange={(event) => setBirth(event.target.value)}
-        />
-      </label>
-      <button type="button" onClick={handleClick}>
-        Enregistrer
-      </button>
+    <div id="add-dog-comp">
+      <div className="add-dog">
+        <label htmlFor="name">
+          Quel est son nom ?
+          <input
+            type="text"
+            value={name}
+            id="name"
+            onChange={(event) => setName(event.target.value)}
+          />
+        </label>
+        <label htmlFor="birth">
+          Quelle est sa date de naissance ?
+          <input
+            type="text"
+            value={birth}
+            id="birth"
+            onChange={(event) => setBirth(event.target.value)}
+            placeholder="AAAA/MM/JJ"
+          />
+        </label>
+        <button type="button" onClick={handleClick}>
+          Enregistrer
+        </button>
+      </div>
     </div>
   );
 }

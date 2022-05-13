@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "../assets/css/test.css";
 
@@ -74,6 +75,7 @@ export default function Test() {
           </div>
           <div className="answer-section">
             {tests[currentTest].answerOptions.map((answerOption) => (
+              // eslint-disable-next-line react/button-has-type
               <button
                 id="valuebtn"
                 onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
