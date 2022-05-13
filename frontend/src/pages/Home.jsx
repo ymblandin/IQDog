@@ -4,5 +4,9 @@ import "../assets/css/home.css";
 
 export default function Home() {
   const { dogId } = useContext(IdContext);
-  return <div className="home">{dogId}</div>;
+  return (
+    <div className="home">
+      <div>{dogId}</div>
+    </div>
+  );
 }
