@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import "../assets/css/add-dog.css";
 
@@ -5,7 +6,18 @@ function AddDog() {
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
 
-  const handleClick = () => {};
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+
+  const handleClick = () => {
+    axios.post("http://localhost:5000/dogs", {
+      name,
+      birth,
+      creation: `${year}/${month}/${day}`,
+    });
+  };
 
   return (
     <div id="add-dog-comp">
