@@ -41,3 +41,14 @@ INSERT INTO `dog` (`name`, `date_of_birth`, `date_of_creation`) VALUES
 ('Dobby','1984/01/12', '2015/04/28/'),
 ('Gucci', '2002/05/22', '2020/06/21'),
 ('Kutz', '2021/10/08', '2022/08/26');
+
+--
+-- Creation de la table `test`
+--
+
+CREATE TABLE `test` (
+  `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `` varchar(255) NOT NULL,
+  `date_of_birth` date NULL,
+  `date_of_creation` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
