@@ -5,6 +5,7 @@ import "./components/Background.css";
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import AddDog from "./pages/AddDog";
 import Test from "./pages/Test";
 import Results from "./pages/Results";
 
@@ -16,6 +17,7 @@ function App() {
         <h3 className="title">IQ DOGG</h3>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/adddog" element={<AddDog />} />
           <Route path="/home" element={<Home />} />
           <Route path="/test" element={<Test />} />
           <Route path="/results" element={<Results />} />

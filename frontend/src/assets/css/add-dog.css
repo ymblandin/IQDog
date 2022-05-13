@@ -1,0 +1,17 @@
+.add-dog{
+  margin: auto;
+  background-color: rgb(16, 16, 16);
+  position: relative;
+  min-height: 50vh;
+  min-width: 30vw;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 2rem;
+}
+
+.add-dog button{
+  width: auto;
+}
