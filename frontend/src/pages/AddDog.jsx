@@ -5,11 +5,16 @@ function AddDog() {
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
 
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+
   const handleClick = () => {
     axios.post("http://localhost:5000/dogs", {
       name,
       birth,
-      creation: new Date(),
+      creation: `${year}/${month}/${day}`,
     });
   };
 
