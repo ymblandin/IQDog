@@ -1,5 +1,19 @@
 .home {
   position: relative;
+  z-index: 10;
+  color: black;
+}
+
+.home img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: 5px solid brown;
+  background-color: brown;
+}
+
+.home h2 {
+  color: brown;
   z-index: 1;
   font-size: 3rem;
   color: black;
