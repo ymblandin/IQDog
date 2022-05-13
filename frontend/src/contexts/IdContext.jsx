@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const IdContext = createContext();
 
 function IdProvider({ children }) {
-  const [dogId, setDogId] = useState({});
+  const [dogId, setDogId] = useState(0);
 
   return (
     <IdContext.Provider

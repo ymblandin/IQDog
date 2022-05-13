@@ -7,7 +7,6 @@ import "../assets/css/login.css";
 function Login() {
   // eslint-disable-next-line no-unused-vars
   const [dogs, setDogs] = useState([]);
-
   useEffect(() => {
     // Call the API
     axios
