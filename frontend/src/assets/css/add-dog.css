@@ -1,6 +1,6 @@
 .add-dog{
   margin: auto;
-  background-color: rgb(16, 16, 16);
+  background: radial-gradient(rgba(16, 16, 16, 0.475), rgba(3, 3, 3, 0.912));
   position: relative;
   min-height: 50vh;
   min-width: 30vw;
@@ -10,8 +10,37 @@
   align-items: center;
   justify-content: space-around;
   border-radius: 2rem;
+  font-size: 1.5rem;
 }
 
 .add-dog button{
   width: auto;
+  background-color: transparent;
+  border: aliceblue solid 2px;
+  padding: 1rem;
 }
+.add-dog button:hover{
+  width: auto;
+  background-color: transparent;
+  border-color: aliceblue;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 10px whitesmoke;
+}
+.add-dog label{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+input{
+  height: 2rem;
+}
+input#birth{
+  width: 10rem;
+  color: black;
+}
+input#name{
+  width: 13rem;
+  color: black;
+}
+
