@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import { IdContext } from "../contexts/IdContext";
 import "../assets/css/add-dog.css";
 
 function AddDog() {
+  // const { setDogId } = useContext(IdContext);
+
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
 
@@ -20,8 +23,7 @@ function AddDog() {
       birth,
       creation: `${year}/${month}/${day}`,
     });
-
-    navigate("/home", { replace: true });
+    navigate("/home");
   };
 
   return (
