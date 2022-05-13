@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   z-index: 10;
   text-align: center;
+  color: #282c34;
 }
 
 .App-logo {
