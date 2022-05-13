@@ -1,11 +1,11 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-// import { IdContext } from "../contexts/IdContext";
+import { IdContext } from "../contexts/IdContext";
 import "../assets/css/add-dog.css";
 
 function AddDog() {
-  // const { setDogId } = useContext(IdContext);
+  const { setDogId } = useContext(IdContext);
 
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
@@ -18,11 +18,13 @@ function AddDog() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    axios.post("http://localhost:5000/dogs", {
-      name,
-      birth,
-      creation: `${year}/${month}/${day}`,
-    });
+    axios
+      .post("http://localhost:5000/dogs", {
+        name,
+        birth,
+        creation: `${year}/${month}/${day}`,
+      })
+      .then((response) => setDogId(response.data.insertId));
     navigate("/home");
   };
 
