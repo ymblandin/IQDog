@@ -21,8 +21,7 @@ export default function Home() {
   }, []);
   return (
     <div className="home">
-      {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
-      <img src={dog.img} alt="dog image" />
+      <img src={dog.img} alt="dog" />
       <h2>{dog.name}</h2>
       <NavLink to="/Test">
         <button type="button">Commencer les tests</button>

@@ -19,11 +19,12 @@ function Login() {
       <NavLink to="/adddog">
         <button type="button">Ajouter un chien</button>
       </NavLink>
-
-      {dogs.map((dog) => (
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        <Card key={dog.id} {...dog} />
-      ))}
+      <div className="cards">
+        {dogs.map((dog) => (
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          <Card key={dog.id} {...dog} />
+        ))}
+      </div>
     </div>
   );
 }
