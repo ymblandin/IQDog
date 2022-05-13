@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +37,16 @@ body {
 }
 
 /* Test/TIMER/LEFT SECTION */
+.Test {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: radial-gradient(rgba(16, 16, 16, 0.475), rgba(3, 3, 3, 0.912));
+  position: relative;
+  padding: 1rem;
+  border-radius: 2rem;
+}
 .Test-section {
   width: 100%;
   position: relative;
@@ -54,49 +64,32 @@ body {
   margin-bottom: 12px;
 }
 
-.timer-text {
-  background: rgb(230, 153, 12);
-  padding: 15px;
-  margin-top: 20px;
-  margin-right: 20px;
-  border: 5px solid rgb(255, 189, 67);
-  border-radius: 15px;
-  text-align: center;
-}
-
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: relative;
+  row-gap: 0.5rem;
 }
 
 button {
   width: 100%;
+  /* height: 2rem; */
   font-size: 16px;
   color: #ffffff;
-  background-color: #252d4a;
+  background-color: #f8f122d1;
   border-radius: 15px;
   display: flex;
   padding: 5px;
   justify-content: flex-start;
   align-items: center;
-  border: 5px solid #234668;
   cursor: pointer;
 }
 
-.correct {
-  background-color: #2f922f;
-}
-
-.incorrect {
-  background-color: #ff3333;
-}
-
 button:hover {
-  background-color: #555e7d;
+  background-color: #d4d6db;
 }
 
 button:focus {
@@ -105,4 +98,13 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+
+#valuebtn {
+  height: 3rem;
+  width: 60vw;
+  margin: auto;
+}
+#valuebtn p {
+  margin: auto;
 }

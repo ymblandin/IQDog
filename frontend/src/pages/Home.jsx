@@ -5,6 +5,7 @@ import "../assets/css/home.css";
 
 export default function Home() {
   const { dogId } = useContext(IdContext);
+
   const [dog, setDog] = useState({});
 
   useEffect(() => {

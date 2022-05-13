@@ -14,4 +14,7 @@
 
 .home h2 {
   color: #252d4a;
+  z-index: 1;
+  font-size: 3rem;
+  color: black;
 }
