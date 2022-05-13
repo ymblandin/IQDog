@@ -20,9 +20,9 @@ export default function Home() {
   }, []);
   return (
     <div className="home">
+      {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
       <img src={dog.img} alt="dog image" />
       <h2>{dog.name}</h2>
     </div>
   );
-
 }
