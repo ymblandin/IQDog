@@ -41,3 +41,28 @@ INSERT INTO `dog` (`name`, `date_of_birth`, `date_of_creation`) VALUES
 ('Dobby','1984/01/12', '2015/04/28/'),
 ('Gucci', '2002/05/22', '2020/06/21'),
 ('Kutz', '2021/10/08', '2022/08/26');
+
+--
+-- Creation de la table `test`
+--
+
+CREATE TABLE `test` (
+  `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `id_basetest` int(11)  UNSIGNED NOT NULL,
+  `id_testset` int(11)  UNSIGNED NULL,
+  `id_dog` int(11)  UNSIGNED NOT NULL,
+  `result` int(11)  UNSIGNED NOT NULL,
+  `time` int(11)  UNSIGNED NULL
+);
+
+--
+-- Creation de la table `testset`
+--
+
+CREATE TABLE `testset` (
+  `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `id_dog` int(11)  UNSIGNED NOT NULL,
+  `result` int(11)  UNSIGNED NOT NULL
+);
