@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
   return (
     <div className="home">
-      <img src={dog.img} alt="dog image" />
+      <img src={dog.img} alt="dog" />
       <h2>{dog.name}</h2>
     </div>
   );
