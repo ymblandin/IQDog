@@ -1,4 +1,5 @@
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { IdContext } from "../contexts/IdContext";
 import "../assets/css/home.css";
@@ -22,6 +23,9 @@ export default function Home() {
     <div className="home">
       <img src={dog.img} alt="dog" />
       <h2>{dog.name}</h2>
+      <NavLink to="/Test">
+        <button type="button">Commencer les tests</button>
+      </NavLink>
     </div>
   );
 }
