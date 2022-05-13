@@ -2,18 +2,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Background from "./components/Background";
 import "./components/Background.css";
+import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Test from "./pages/Test";
 import Results from "./pages/Results";
-
-import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Background />
+        <h3 className="title">IQ DOGG</h3>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
